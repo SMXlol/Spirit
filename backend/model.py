@@ -20,20 +20,38 @@ def save_data(db, name_db):
         json.dump(db, file, indent=4, ensure_ascii=False)
 
 
-def get_item(db, pet_id):
+def get_name(db, pet_id):
     items = [user for user in db["items"]]
-    info_pet = []
 
     for i in items:
         if i["id"] == pet_id:
             for key, value in i.items():
-                info_pet.append(value)
+                if key == "name":
+                    return value
 
-    return info_pet
+
+def get_readme(db, pet_id):
+    items = [user for user in db["items"]]
+
+    for i in items:
+        if i["id"] == pet_id:
+            for key, value in i.items():
+                if key == "readme":
+                    return value
 
 
-info = get_item(database_pet, 0)
-print(info)
+def get_image_url(db, pet_id):
+    items = [user for user in db["items"]]
+
+    for i in items:
+        if i["id"] == pet_id:
+            for key, value in i.items():
+                if key == "image_url":
+                    return value
+
+
+name, readme, image_url = get_name(database_pet, 0), get_readme(database_pet, 0), get_image_url(database_pet, 0)
+print(f"{name}\n{readme}\n{image_url}")
 
 
 def add_or_edit(db, name, balance, fodder, readme, image_url, food, weight_food):
