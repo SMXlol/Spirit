@@ -11,4 +11,7 @@ class Layout(models.Model):
 
     def __str__(self):
         return self.title
-    
+
+
+class Names(models.Model):
+    name = models.CharField(max_length=200)

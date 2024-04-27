@@ -1,7 +1,8 @@
 from django.shortcuts import render
-from .models import Layout
+from .models import Names
 
 
 def index(request):
-    layout = Layout.objects.all()
-    return render(request, 'layout/main.html', {'layout': layout})
+    name = Names.name
+    return render(request, 'layout/main.html', {'layout': name})
+
