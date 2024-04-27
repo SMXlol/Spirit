@@ -22,20 +22,18 @@ def save_data(db, name_db):
 
 def get_item(db, pet_id):
     items = [user for user in db["items"]]
-    val, info_pet = [], []
-    for i in items:
-        for j in i:
-            if i[j] == pet_id:
-                val.append(i)
+    info_pet = []
 
-    for j in val:
-        for _ in j:
-            info_pet.append(j[_])
+    for i in items:
+        if i["id"] == pet_id:
+            for key, value in i.items():
+                info_pet.append(value)
 
     return info_pet
 
 
-info = get_item(database_pet, 1)
+info = get_item(database_pet, 0)
+print(info)
 
 
 def add_or_edit(db, name, balance, fodder, readme, image_url, food, weight_food):
