@@ -5,5 +5,5 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('see-pet/', views.see_over),
+    path('', views.see_over),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

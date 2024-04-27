@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'login',
     'main',
     'regin',
-    'see_pet',
+    'volunteer',
 ]
 
 MIDDLEWARE = [
