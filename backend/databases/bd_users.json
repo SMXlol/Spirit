@@ -1,0 +1,24 @@
+{
+    "users": [
+        {
+            "id": 0,
+            "name": "Арсений",
+            "last_name": "Волгин",
+            "rent_pets": {
+            },
+            "donations": 0,
+            "fodder": 0
+        },
+        {
+            "id": 1,
+            "name": "Арсений",
+            "last_name": "Чертан",
+            "rent_pets": {
+            },
+            "donations": 0,
+            "fodder": 0
+        }
+    ],
+    "walkers": [
+    ]
+}
