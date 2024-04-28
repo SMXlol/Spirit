@@ -1,0 +1,93 @@
+{% extends 'layout/layout.html' %}
+
+
+{% block title %} Главная страница {% endblock %}
+
+
+{% block content %}
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="card">
+                {% load static %}
+                <p class="card-icon"><img class="icon_dog" src="{% static 'img/icon_dog.jpeg' %}"/></p>
+                <div class="card-tittle">
+                    <a class="content-main-item-max-b">Чижиков Владимир</a>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseOne">
+                            {% load static %}
+                            <img class="icon_down" src="{% static 'img/down.svg' %}"/>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Сумасшедший дед, который жрёт в 2 ночи, когда остальные WORKают над хакатоном
+                        </div>
+                        <div class="accordion-body">
+                            (эта тварь за 10 часов до сдачи сказал переделать весь проект, прям как трушный капитан)
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                {% load static %}
+                <p class="card-icon"><img class="icon_dog" src="{% static 'img/icon_dog.jpeg' %}"/></p>
+                <div class="card-tittle">
+                    <a class="content-main-item-max-b">Слынчук Максим</a>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                            {% load static %}
+                            <img class="icon_down" src="{% static 'img/down.svg' %}"/>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            Front-end разработчик, он токсик и ненавидит дизайнеров, которые делают какой-то бред в фигме, но он топчик
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                {% load static %}
+                <p class="card-icon"><img class="icon_dog" src="{% static 'img/icon_dog.jpeg' %}"/></p>
+                <div class="card-tittle">
+                    <a class="content-main-item-max-b">Чертан Арсений</a>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseThree">
+                            {% load static %}
+                            <img class="icon_down" src="{% static 'img/down.svg' %}"/>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            ПСИХОВАННЫЙ ДИЗАЙНЕР КОТОРЫЙ РИСУЕТ СТИКЕРЫ
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="visually-hidden">Next</span>
+</button>
+{% endblock %}
