@@ -1,0 +1,102 @@
+{% extends 'layout/layout.html' %}
+
+
+{% block title %} Главная страница {% endblock %}
+
+
+{% block content %}
+<div id="carouselExample" class="carousel slide">
+    <div class="carousel-inner">
+        <div class="carousel-item active">
+            <div class="card">
+                {% load static %}
+                <p class="card-icon"><img class="icon_dog" src="{{ img_1 }}"/></p>
+                <div class="card-tittle">
+                    <a class="content-main-item-max-b">{{ name_1 }}</a>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseOne">
+                            {% load static %}
+                            <img class="icon_down" src="{% static 'img/down.svg' %}"/>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            {{ title_1 }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="menu-list-menu">
+                <li><a href="donat/fodder/Карло" class="menu-item-a">Пожертвовать корм</a></li>
+                <li><a href="donat/balance/Карло" class="menu-item-a">Пожертвовать деньги</a></li>
+            </ul>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                {% load static %}
+                <p class="card-icon"><img class="icon_dog" src="{{ img_2 }}"/></p>
+                <div class="card-tittle">
+                    <a class="content-main-item-max-b">{{ name_2 }}</a>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseTwo">
+                            {% load static %}
+                            <img class="icon_down" src="{% static 'img/down.svg' %}"/>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            {{ title_2 }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="menu-list-menu">
+                <li><a href="donat/fodder/Помски" class="menu-item-a">Пожертвовать корм</a></li>
+                <li><a href="donat/balance/Помски" class="menu-item-a">Пожертвовать деньги</a></li>
+            </ul>
+        </div>
+        <div class="carousel-item">
+            <div class="card">
+                {% load static %}
+                <p class="card-icon"><img class="icon_dog" src="{{ img_3 }}"/></p>
+                <div class="card-tittle">
+                    <a class="content-main-item-max-b">{{ name_3 }}</a>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                aria-controls="panelsStayOpen-collapseThree">
+                            {% load static %}
+                            <img class="icon_down" src="{% static 'img/down.svg' %}"/>
+                        </button>
+                    </h2>
+                    <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                        <div class="accordion-body">
+                            {{ title_3 }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <ul class="menu-list-menu">
+                <li><a href="donat/fodder/Харли" class="menu-item-a">Пожертвовать корм</a></li>
+                <li><a href="donat/balance/Харли" class="menu-item-a">Пожертвовать деньги</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="visually-hidden">Previous</span>
+</button>
+<button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="visually-hidden">Next</span>
+</button>
+{% endblock %}
