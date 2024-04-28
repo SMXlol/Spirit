@@ -8,7 +8,7 @@ class Pet(models.Model):
     readme = models.TextField()
     image_url = models.URLField()
     all_rating = models.FloatField(default=0)
-    rating = models.JSONField(default=list)  # Используем JSONField для хранения списка оценок
+    rating = models.JSONField(default=list)
     count_rate = models.IntegerField(default=0)
     walk = models.BooleanField(default=False)
     recommended_food = models.JSONField(default=list)

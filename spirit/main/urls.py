@@ -8,4 +8,5 @@ urlpatterns = [
     path('queue/', views.queue),
     path('faq/', views.faq),
     path('settings/', views.settings),
+    path('names/', views.get_names)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

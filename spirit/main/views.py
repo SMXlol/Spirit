@@ -1,4 +1,6 @@
 from django.shortcuts import render
+from django.http import HttpResponse, HttpRequest
+from volunteer.models import *
 
 
 def index(request):
@@ -15,3 +17,12 @@ def faq(request):
 
 def settings(request):
     return render(request, 'main/settings.html')
+
+
+def get_names(request):
+    pets = Pet.objects.all()
+    names = []
+    for i in pets:
+        names.append(i.name)
+    return names
+
